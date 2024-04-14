@@ -109,7 +109,7 @@ nav ul {
     transition: 0.5s;
     padding: 20px 0;
     backdrop-filter: blur(25px);
-    z-index: 20px;
+    z-index: 2000000;
   }
   nav.active {
     transform: scaleY(1);
