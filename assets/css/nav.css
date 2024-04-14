@@ -12,8 +12,21 @@ header {
   position: fixed;
   top: 40px;
   left: 0%;
-  background-color: transparent;
-  backdrop-filter: blur(20px);
+}
+.button {
+  background-color: #92e3a9;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 10px 12px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.3s;
+  border-radius: 8px;
+}
+.button:hover {
+  background-color: #fff;
+  color: #92e3a9;
 }
 .nav_row {
   display: flex;
@@ -24,7 +37,7 @@ header {
   margin: 0 auto;
 }
 .logo {
-  color: #fff;
+  color: #92e3a9;
   font-size: 1.5em;
 }
 .menu {
@@ -38,7 +51,7 @@ header {
   height: 3px;
   width: 100%;
   margin-bottom: 10px;
-  background-color: #fff;
+  background-color: #92e3a9;
   transition: transform 0.5s;
 }
 .menu.active span:nth-child(1) {
@@ -64,17 +77,19 @@ nav ul {
 
 .nav_list a {
   text-decoration: none;
-  color: #fff;
+  color: #92e3a9;
   font-size: 18px;
   font-weight: 600;
 }
 .nav_list a:hover {
-  color: #92e3a9;
+  color: #fff;
 }
 @media (max-width: 750px) {
   .nav_container {
     top: 0px;
     padding-inline: 20px;
+    background-color: transparent;
+    backdrop-filter: blur(20px);
   }
   .logo {
     font-size: 1.2em;

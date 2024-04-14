@@ -6,21 +6,21 @@ menuBtn.addEventListener("click", () => {
 });
 
 /*--------- js for preloader --------*/
-/*function hidePreloader() {
+function hidePreloader() {
   var preloader = document.querySelector(".preloader");
   if (preloader) {
     preloader.style.display = "none";
   }
-}*/
+}
 
 // Timeout duration in milliseconds (e.g., 5 seconds)
-//var timeoutDuration = 5000;
+var timeoutDuration = 5000;
 
 // Set timeout to hide the preloader after a certain duration
-//var timeout = setTimeout(hidePreloader, timeoutDuration);
+var timeout = setTimeout(hidePreloader, timeoutDuration);
 
 // Optional: If you want to clear the timeout if the content loads before the timeout
 window.addEventListener("load", function () {
-  var body = document.querySelector("body");
-  body.classList.add("loaded");
+  clearTimeout(timeout);
+  hidePreloader();
 });
