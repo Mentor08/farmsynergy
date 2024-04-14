@@ -1,0 +1,271 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Basic styling */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+main {
+  position: relative;
+}
+.preloader {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(#000000ba, #00000085),
+    url("../images/bg.jpg") no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  color: #92e3a9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.preloader svg {
+  width: 150px;
+  height: 150px;
+  fill-opacity: 0;
+  stroke: #92e3a9;
+  stroke-width: 10px;
+  stroke-dasharray: 4500;
+  animation: draw 6s linear;
+}
+@keyframes draw {
+  0% {
+    stroke-dashoffset: 4500;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+.preloader h1 {
+  font-size: 50px;
+  animation: scale 2s;
+}
+@keyframes scale {
+  0% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.preloader h2 {
+  font-size: 25px;
+  animation: width 4s;
+}
+@keyframes width {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.loaded .preloader {
+  display: none;
+}
+ul {
+  list-style-type: none;
+}
+
+.hero {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 100%;
+}
+.hero h1 {
+  font-size: 50px;
+}
+.hero p {
+  font: 25px;
+  text-align: center;
+  line-height: 25px;
+}
+.section {
+  padding: 70px 0;
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  gap: 20px;
+}
+.row_flex {
+  display: flex;
+  gap: 20px;
+}
+
+.title {
+  color: #92e3a9;
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/*------------------ About -----------*/
+.about_row {
+  justify-content: center;
+}
+.about_coln {
+  flex-basis: 50%;
+  text-align: left;
+}
+.about_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.about_coln h2 {
+  margin-bottom: 10px;
+  position: relative;
+}
+.about_coln .mission {
+  margin-top: 20px;
+}
+.about_p {
+  text-align: center;
+}
+/*------------------ gallery -----------*/
+.small_container {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.row_grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 5px;
+}
+.gallery_img {
+  height: 250px;
+}
+.gallery_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/*------------------ services -----------*/
+.services {
+  background: linear-gradient(#000000ba, #00000085),
+    url("../images/p5.jpg") no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.service {
+  padding: 10px 15px;
+  color: #fff;
+  border-radius: 10px;
+  border: 2px solid #92e3a9;
+  background-color: #ffffff66;
+}
+.service h3 {
+  margin-bottom: 10px;
+}
+/*------------------ contact -----------*/
+.sponsor_img {
+  height: 100px;
+}
+.sponsor_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.contact_img,
+.contact_form {
+  flex-basis: 50%;
+}
+.contact_form form {
+  padding: 15px 10px;
+  border: 2px solid #92e3a9;
+  border-radius: 10px;
+}
+.contact_form input {
+  height: 40px;
+  margin-bottom: 10px;
+  transition: all 0.3s;
+}
+
+.contact_form form input,
+textarea {
+  border-radius: 6px;
+  padding: 5px 7px;
+  width: 100%;
+  outline: none;
+  border: 0.5px solid #92e3a9 !important;
+  resize: none;
+}
+input::placeholder {
+  color: #000000ba;
+}
+input[type="submit"] {
+  color: #92e3a9;
+  font-weight: 18px;
+  font-weight: bold;
+  background-color: transparent;
+  margin-top: 15px;
+}
+input[type="submit"]:hover {
+  color: #fff;
+  background-color: #92e3a9;
+}
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 780px) {
+  .preloader h1,
+  .hero h1,
+  .title {
+    font-size: 30px;
+    text-align: center;
+  }
+  .section {
+    padding: 50px 0;
+  }
+  .hero p {
+    font: 20px;
+  }
+  .row_flex {
+    flex-wrap: wrap;
+  }
+  .about_coln,
+  .contact_img,
+  .contact_form {
+    flex-basis: 100%;
+    padding: 0 20px;
+    text-align: center;
+  }
+  .about_p,
+  .row_grid {
+    padding: 0 20px;
+  }
+  .sponsor_img {
+    height: 50px;
+  }
+}
