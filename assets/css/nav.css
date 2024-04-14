@@ -103,7 +103,7 @@ nav ul {
     left: 0;
     width: 100%;
     justify-content: center;
-    background: #92e3a999;
+    background: #92e3a9;
     transform: scaleY(0);
     transform-origin: top;
     transition: 0.5s;
