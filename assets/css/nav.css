@@ -8,10 +8,12 @@ header {
 }
 .nav_container {
   width: 100%;
-  padding: 10px 0;
+  padding: 25px 0 15px;
   position: fixed;
-  top: 40px;
+  top: 0;
   left: 0%;
+  background-color: transparent;
+  backdrop-filter: blur(20px);
 }
 .button {
   background-color: #92e3a9;
@@ -87,9 +89,7 @@ nav ul {
 @media (max-width: 750px) {
   .nav_container {
     top: 0px;
-    padding-inline: 20px;
-    background-color: transparent;
-    backdrop-filter: blur(20px);
+    padding: 10px 20px;
   }
   .logo {
     font-size: 1.2em;
@@ -118,8 +118,11 @@ nav ul {
     display: block;
     text-align: center;
   }
-  nav ul .nav_list {
+  .nav_list {
     margin-bottom: 15px;
     padding: 10px 0;
+  }
+  .nav_list a {
+    color: #fff;
   }
 }
